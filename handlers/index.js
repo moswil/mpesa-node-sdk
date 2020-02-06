@@ -1,5 +1,6 @@
 module.exports = {
 	...require('./home'),
+	...require('./mpesa'),
 };
 
 module.exports.notFound = (req, res, next) => {

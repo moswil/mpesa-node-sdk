@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -12,6 +13,7 @@ app.use(bodyParser.json());
 
 // Routes
 app.use('/', routes.home);
+app.use('/api/v1', routes.mpesa);
 
 // Handlers
 app.use(handle.notFound);
