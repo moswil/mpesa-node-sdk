@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const handle = require('./handlers');
+const routes = require('./routes');
 
 const app = express();
 
@@ -10,6 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Routes
+app.use('/', routes.home);
 
 // Handlers
 app.use(handle.notFound);
